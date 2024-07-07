@@ -26,14 +26,15 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
 
     useEffect(() => {
         if(open) {
+            if (typeof window !== 'undefined') document.body.style.overflow = 'hidden'
             whenPause()
         }else {
+            if (typeof window !== 'undefined') document.body.style.overflow = 'auto'
             setTour(false)
             whenPlay();
         }
     }, [open]);
 
-    open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
 
     return (
         <header className='header __container'>
