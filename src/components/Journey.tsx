@@ -167,11 +167,11 @@ const Journey = () => {
                         <p className='tour__title'>HONG HAO MOTORBIKE TOUR</p>
                         <p className='tour__text'>Experience the raw beauty of Hà Giang with our immersive travel adventures. From rugged mountain landscapes to vibrant ethnic cultures, Hà Giang offers a truly unique and authentic experience. Explore remote villages.</p>
                         <div className="tour__list">
-                            <p className="tour__item"><i class="fa-solid fa-check"></i>Tours accommodate a maximum of 10 guests</p>
-                            <p className="tour__item"><i class="fa-solid fa-check"></i>Flexible cancellation policy</p>
-                            <p className="tour__item"><i class="fa-solid fa-check"></i>Book now, pay later</p>
-                            <p className="tour__item"><i class="fa-solid fa-check"></i>Fluent English-speaking guides</p>
-                            <p className="tour__item"><i class="fa-solid fa-check"></i>Creating job opportunities for the Vietnamese community</p>
+                            <p className="tour__item"><i className="fa-solid fa-check"></i>Tours accommodate a maximum of 10 guests</p>
+                            <p className="tour__item"><i className="fa-solid fa-check"></i>Flexible cancellation policy</p>
+                            <p className="tour__item"><i className="fa-solid fa-check"></i>Book now, pay later</p>
+                            <p className="tour__item"><i className="fa-solid fa-check"></i>Fluent English-speaking guides</p>
+                            <p className="tour__item"><i className="fa-solid fa-check"></i>Creating job opportunities for the Vietnamese community</p>
                         </div>
                         <div className="tour__task">
                             <button className='tour__button-orange'></button>
