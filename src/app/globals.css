@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+body>div{
+    overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.__container{
+    width: 100vw;
+    height: fit-content;
+}
+
+.__content{
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 575px){
+    .__content{
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .__content{
+        width: 576px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .__content{
+        width: 768px;
+    }
+}
+
+@media (min-width: 992px ) and (max-width: 1199px){
+    .__content{
+        width: 992px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+    .__content{
+        width: 1200px;
+    }
+}
+
+@media (min-width: 1320px){
+    .__content{
+        width: 1320px;
+    }
+}

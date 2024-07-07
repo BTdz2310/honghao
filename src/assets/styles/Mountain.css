@@ -1,0 +1,204 @@
+.mountain.__container{
+    background-color: #122718;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.mountain__info{
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /*justify-content: center;*/
+    align-items: center;
+    width: 920px;
+    padding-bottom: 120px;
+    z-index: 10;
+}
+
+.mountain__text{
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 0 120px;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+}
+
+.mountain__circle--list{
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.mountain__circle--item{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /*border: 1px dashed white;*/
+    /*animation: rotate 12s linear infinite;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /*transition: transform 0.3s;*/
+}
+
+.mountain__circle--rotate{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 20;
+    border: 1px dashed white;
+    animation: rotate 12s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.mountain__vector{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: -110px;
+    z-index: 9;
+    opacity: 0.05;
+}
+
+.mountain__circle--item:hover, .mountain__circle--item:hover .mountain__circle--rotate{
+    transform: scale(1.1);
+    background-color: #E64827;
+    /*animation: unset;*/
+}
+
+.mountain__circle--item:hover .mountain__circle--text1{
+    transform: translateY(-100%);
+}
+
+.mountain__circle--item:hover .mountain__circle--text2{
+    transform: translateY(-100%);
+}
+
+.mountain__circle--show{
+    /*padding: 0 10px;*/
+    position: absolute;
+    height: 16px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*transform: rotate(-0deg) !important;*/
+    /*animation: counter-rotate 12s linear infinite;*/
+}
+
+.mountain__circle--show.mountain__circle--show-2line{
+    height: 32px;
+}
+
+.mountain__circle--show p{
+    text-align: center;
+    transition: transform 0.5s;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.mountain__circle--show p span{
+    display: block;
+}
+
+@media (max-width: 575px){
+
+    .mountain__text{
+        font-size: 6vw;
+        padding: 0 20px;
+    }
+
+    .mountain__info{
+        width: 100vw;
+    }
+
+    .mountain__circle--list{
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .mountain__circle--item{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .mountain__circle--show p{
+        font-size: 8px;
+    }
+
+    .mountain__circle--show{
+        height: 12px;
+    }
+
+    .mountain__circle--show.mountain__circle--show-2line{
+        height: 24px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .mountain__text{
+        font-size: 24px;
+    }
+
+    .mountain__circle--list{
+        width: 560px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mountain__circle--item{
+        width: 120px;
+        height: 120px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .mountain__circle--list{
+        width: 720px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 992px ) and (max-width: 1199px){
+
+    .tour__title{
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+
+
+
+}

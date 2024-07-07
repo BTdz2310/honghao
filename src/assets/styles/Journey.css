@@ -1,0 +1,405 @@
+.journey{
+    position: relative;
+    background-image: url("/menu-card-1.jpeg");
+    background-size: cover;
+    background-position: center right;
+    overflow-x: hidden;
+}
+
+.journey__background{
+    background: linear-gradient(180deg, #122718 0%, rgba(18, 39, 24, 0.7) 50%, #122718 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.journey .__content{
+    z-index: 50;
+    position: relative;
+    padding: 20px 20px 0;
+}
+
+.tour{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.tour__info{
+    width: 50%;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tour__title{
+    font-size: 44px;
+    font-weight: 900;
+    font-family: "Londrina Solid", sans-serif;
+    color: white;
+    padding: 20px 0;
+}
+
+.tour__text{
+    color: #c5c5c5;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tour__item{
+    display: flex;
+    align-items: center;
+}
+
+.tour__item p{
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tour__item i{
+    padding-right: 10px;
+}
+
+.tour__task{
+    display: flex;
+    gap: 20px;
+}
+
+.tour__task button{
+    width: 140px;
+    height: 56px;
+    border-radius: 16px;
+}
+
+.tour__button-orange{
+    background-color: #DA4B19;
+}
+
+.tour__button-trans{
+    border: 1px solid white;
+    background-color: inherit;
+}
+
+.tour__road{
+    position: absolute;
+    top: 100px;
+    /*height: 100%;*/
+    left: 50%;
+    height: 0;
+    overflow: hidden;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.road__text{
+    font-weight: 800;
+    font-size: 14px;
+    left: 50%;
+    width: fit-content;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0px;
+}
+
+.road__img{
+    height: 100vh;
+    width: auto;
+}
+
+.tour__road--bg{
+    position: absolute;
+    top: 0px;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.motor__img{
+    width: 60%;
+    position: absolute;
+    /*top: 120px;*/
+    top: calc(8 / 45 * 100vh);
+    left: calc(28 / 675 * 100vh);
+    /*left: 28px;*/
+    opacity: 0;
+    transform: rotate(4deg);
+}
+
+.road-mark__img{
+    position: absolute;
+    top: 50px;
+    width: 40px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tour__cloud{
+    width: 800px;
+    right: -800px;
+    /*top: ;*/
+    /*padding-left: 40px;*/
+    position: absolute;
+    top: 25%;
+    transform: translate(0, -50%);
+}
+
+.cloud__main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 9;
+}
+
+.cloud__9h{
+    position: absolute;
+    width: 50%;
+    left: -10%;
+    top: 30%;
+    z-index: 10;
+    animation: go-left 50s linear infinite;
+}
+
+.cloud__11h{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 30%;
+    animation: go-down 28s linear infinite;
+}
+
+.cloud__12h{
+    position: absolute;
+    width: 40%;
+    top: -12%;
+    left: 20%;
+    z-index: 10;
+    animation: go-right 18s linear infinite;
+}
+
+.cloud__13h{
+    position: absolute;
+    width: 30%;
+    top: -10%;
+    right: 23%;
+    opacity: 0.4;
+    animation: go-right 24s linear infinite;
+}
+
+
+@keyframes go-left {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-28px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(28px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes go-down {
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(14px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(-14px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes go-right {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(14px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-14px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.beautiful{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.beautiful__title{
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.beautiful__text{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 110;
+}
+
+.beautiful__sign{
+    width: 396px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+.beautiful__zoom{
+    border-radius: 16px;
+    width: 768px;
+    height: 440px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width: 575px){
+
+    .road__text{
+        font-size: 12px;
+    }
+
+    .tour__road{
+        display: none;
+    }
+
+    .road-mark__img{
+        display: none;
+    }
+
+    .tour__info{
+        width: 100%;
+    }
+
+    .tour__cloud{
+        display: none;
+    }
+
+    .tour__title{
+        font-size: 6vw;
+    }
+
+    .tour__text{
+        font-size: 14px;
+    }
+
+    .tour__item{
+        font-size: 12px;
+    }
+
+    .tour__task{
+        width: 100%;
+    }
+
+    .tour__task button{
+        flex-grow: 2;
+    }
+
+    .tour{
+        height: fit-content;
+        min-height: fit-content;
+        padding-bottom: 80px;
+    }
+
+    .beautiful{
+        display: none;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .beautiful__title{
+        font-size: 36px;
+    }
+
+    .tour__info{
+        width: 100%;
+        z-index: 140;
+    }
+
+    .tour__cloud{
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .tour__cloud{
+        width: 560px;
+    }
+
+    .tour__title{
+        font-size: 32px;
+        padding: 10px 0;
+    }
+
+    .tour__text{
+        font-size: 14px;
+    }
+
+    .tour__item{
+        font-size: 12px;
+    }
+
+    .beautiful__title{
+        font-size: 44px;
+    }
+
+}
+
+@media (min-width: 992px ) and (max-width: 1199px){
+
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+
+
+
+}

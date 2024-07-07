@@ -1,0 +1,213 @@
+.pin{
+    background-color: white;
+    padding-bottom: 80px;
+}
+
+.pin__title{
+    font-size: 44px;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 900;
+    color: #262626;
+}
+
+.pin .__content{
+    padding-top: 40px;
+    display: flex;
+    gap: 80px;
+}
+
+.pin__left{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pin__img{
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.pin__right{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.pin__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.pin__item{
+    width: 550px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    position: relative;
+}
+
+.pin__item--info{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.pin__item--text{
+    display: flex;
+    align-items: center;
+
+}
+
+.pin__item--title{
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+}
+
+.pin__item--text i{
+    padding-right: 5px;
+
+}
+
+.pin__item--text b{
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    padding-right: 5px;
+}
+
+.pin__item--text span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #f1f1f1;
+}
+
+.pin__item--price{
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+.pin__item--price::before{
+    content: "$";
+}
+
+.pin__back{
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.pin__show{
+    display: none;
+}
+
+@media (max-width: 575px){
+
+    .pin__left{
+        display: none;
+    }
+
+    .pin__show{
+        display: block;
+    }
+
+    .pin .__content{
+        flex-direction: column;
+    }
+
+    .pin__right{
+        width: 100%;
+    }
+
+    .pin__item{
+        height: 420px;
+        width: 240px;
+        flex-shrink: 0;
+    }
+
+    .pin__list{
+        flex-direction: row;
+        gap: 8px;
+        overflow: scroll;
+    }
+
+    .pin__item--text{
+        display: none;
+        font-size: 8px;
+    }
+
+    .pin__item--price{
+        display: none;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .pin__left{
+        display: none;
+    }
+
+    .pin__show{
+        display: block;
+    }
+
+    .pin .__content{
+        flex-direction: column;
+    }
+
+    .pin__right{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .pin__item{
+        width: 400px;
+        height: 250px;
+    }
+
+    .pin__title{
+        font-size: 16px;
+    }
+
+    .pin__item--text i, .pin__item--text b, .pin__item--text span{
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 992px ) and (max-width: 1199px){
+
+
+
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+
+    .pin__item{
+        width: 450px;
+        height: 320px;
+    }
+
+    .pin__content>div{
+        /*flex-grow: 0;*/
+    }
+
+}
