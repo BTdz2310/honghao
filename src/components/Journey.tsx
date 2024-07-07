@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Journey = () => {
 
-    const zoomRef = useRef(null);
+    const zoomRef = useRef<HTMLVideoElement|null>(null);
     const titleRef = useRef(null);
     const textRef = useRef(null);
     const tourRef = useRef(null);
@@ -116,9 +116,15 @@ const Journey = () => {
             top: '40px'
         })
 
-        setTimeout(()=>{
-            zoomRef.current.play();
-        },1000)
+        if (zoomRef.current) {
+            setTimeout(() => {
+                if (zoomRef.current) {
+                    if ("play" in zoomRef.current) {
+                        zoomRef.current.play();
+                    }
+                }
+            }, 1000);
+        }
     }
 
     const handleUnZoom = () => {
@@ -140,9 +146,15 @@ const Journey = () => {
             top: '20px'
         })
 
-        setTimeout(()=>{
-            zoomRef.current.pause();
-        },1000)
+        if (zoomRef.current) {
+            setTimeout(() => {
+                if (zoomRef.current) {
+                    if ("pause" in zoomRef.current) {
+                        zoomRef.current.pause();
+                    }
+                }
+            }, 1000);
+        }
     }
 
     return (
