@@ -94,6 +94,10 @@
     align-items: center;
 }
 
+.header__close i{
+    color: white;
+}
+
 .menu .__content{
     padding-top: 120px;
     height: 100%;
@@ -124,6 +128,7 @@
     font-size: 28px;
     font-weight: 700;
     transition: all 0.5s;
+    color: white;
 }
 
 .menu__link:last-child{
