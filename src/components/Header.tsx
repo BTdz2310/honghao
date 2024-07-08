@@ -5,6 +5,14 @@ import Image from "next/image";
 import logo from '@/assets/images/img_1.png'
 import { motion } from "framer-motion"
 
+import mc1 from '../../public/menu-card-1.jpeg'
+import mc2 from '../../public/menu-card-2.jpeg'
+import mc3 from '../../public/menu-card-3.jpeg'
+import mc4 from '../../public/menu-card-4.jpeg'
+import mc5 from '../../public/menu-card-5.jpeg'
+
+import menuBG from '../../public/img_menu.png'
+
 // import logo from '@/assets/images/logo.png'
 
 const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}) => {
@@ -62,6 +70,9 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
 
             </div>
             <div className="menu" onClick={(e)=>e.stopPropagation()} id={open ? 'menu--close':'menu--open'}>
+                <div className="menu__bg">
+                    <Image src={menuBG.src} alt={'bg'} fill={true} quality={75}/>
+                </div>
                 <div className="menu__background--left">
 
                 </div>
@@ -108,7 +119,10 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
                     <div className="menu__find" style={{opacity: tour ? '1' : '0', visibility: tour ? 'visible' : 'hidden', transition: 'opacity 0.5s'}}>
                         <p className='menu__find--title'>Find your tour:</p>
                         <div className="menu__card--list">
-                            <div className="menu__card--item" style={{backgroundImage: 'url(/menu-card-1.jpeg)'}}>
+                            <div className="menu__card--item">
+                                <div className="menu__card--bg">
+                                    <Image src={mc1.src} alt={'menu-card'} fill={true}  quality={20}/>
+                                </div>
                                 <div className="menu__card--info">
                                     <div className="menu__card--price">199</div>
                                     <div className="menu__card--text">Ha Giang Loop tour: Itinerary in 4 Days 5 Nights</div>
@@ -119,7 +133,10 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
                                     </div>
                                 </div>
                             </div>
-                            <div className="menu__card--item" style={{backgroundImage: 'url(/menu-card-2.jpeg)'}}>
+                            <div className="menu__card--item">
+                                <div className="menu__card--bg">
+                                    <Image src={mc2.src} alt={'menu-card'} fill={true}  quality={20}/>
+                                </div>
                                 <div className="menu__card--info">
                                     <div className="menu__card--price">199</div>
                                     <div className="menu__card--text">Ha Giang Loop tour: Itinerary in 4 Days 5 Nights</div>
@@ -130,7 +147,10 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
                                     </div>
                                 </div>
                             </div>
-                            <div className="menu__card--item" style={{backgroundImage: 'url(/menu-card-3.jpeg)'}}>
+                            <div className="menu__card--item">
+                                <div className="menu__card--bg">
+                                    <Image src={mc3.src} alt={'menu-card'} fill={true}  quality={20}/>
+                                </div>
                                 <div className="menu__card--info">
                                     <div className="menu__card--price">199</div>
                                     <div className="menu__card--text">Ha Giang Loop tour: Itinerary in 4 Days 5 Nights</div>
@@ -141,7 +161,10 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
                                     </div>
                                 </div>
                             </div>
-                            <div className="menu__card--item" style={{backgroundImage: 'url(/menu-card-4.jpeg)'}}>
+                            <div className="menu__card--item">
+                                <div className="menu__card--bg">
+                                    <Image src={mc4.src} alt={'menu-card'} fill={true}  quality={20}/>
+                                </div>
                                 <div className="menu__card--info">
                                     <div className="menu__card--price">199</div>
                                     <div className="menu__card--text">Ha Giang Loop tour: Itinerary in 4 Days 5 Nights</div>
@@ -152,7 +175,10 @@ const Header = ({whenPause, whenPlay}: {whenPause: Function, whenPlay: Function}
                                     </div>
                                 </div>
                             </div>
-                            <div className="menu__card--item" style={{backgroundImage: 'url(/menu-card-5.jpeg)'}}>
+                            <div className="menu__card--item">
+                                <div className="menu__card--bg">
+                                    <Image src={mc5.src} alt={'menu-card'} fill={true}  quality={20}/>
+                                </div>
                                 <div className="menu__card--info">
                                     <div className="menu__card--price">199</div>
                                     <div className="menu__card--text">Ha Giang Loop tour: Itinerary in 4 Days 5 Nights</div>

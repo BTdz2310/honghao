@@ -10,6 +10,11 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import imgBG1 from '../../public/img_1.png'
+import imgBG2 from '../../public/img_2.png'
+import imgBG3 from '../../public/img_3.png'
+import imgBG4 from '../../public/img_4.png'
+import imgBG5 from '../../public/img_5.png'
 
 //1. https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178031/kxp2np5yforlo7ufoo6k.png
 //2. https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178128/rcr66uby2avtqpfre9dj.png
@@ -18,6 +23,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Hero = () => {
 
     const imgVectorRef = useRef(null);
+    const imgVector2Ref = useRef(null);
     const circle1Ref = useRef(null);
     const circle2Ref = useRef(null);
     const circle3Ref = useRef(null);
@@ -36,159 +42,159 @@ const Hero = () => {
 
         const ctx = gsap.context(()=> {
 
-        //1
+            //1
 
-        gsap.timeline().to(imgVectorRef.current, {
-            delay: 0.5,
-            attr: {
-                src: 'https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178128/rcr66uby2avtqpfre9dj.png'
-            },
-            // opacity: 0
-        }).to(imgVectorRef.current, {
-            delay: 1.5,
-            opacity: 0,
-            duration: 3,
-            ease: 'easeInOutQuad'
-        })
+            gsap.to(imgVectorRef.current, {
+                delay: 0.5,
+                opacity: 0
+            })
 
-        //2
+            gsap.to(imgVector2Ref.current, {
+                delay: 1.5,
+                opacity: 0,
+                duration: 3,
+                ease: 'easeInOutQuad'
+            })
 
-        gsap.timeline().to(circle1Ref.current, {
-            delay: 2.5,
-            x: -200,
-            duration: 3,
-            ease: 'easeInOutQuad'
-        }).to(circle1Ref.current, {
-            // delay: 3,
-            x: -400,
-            duration: 2.5,
-            ease: 'easeInQuad'
-        })
 
-        gsap.timeline().to(circle2Ref.current, {
-            delay: 2.5,
-            x: 200,
-            duration: 3,
-            ease: 'easeInOutQuad'
-        }).to(circle2Ref.current, {
-            // delay: 3,
-            x: 400,
-            duration: 2.5,
-            ease: 'easeInQuad'
-        })
+            //2
 
-        gsap.timeline().to(circle3Ref.current, {
-            delay: 2.5,
-            y: -80,
-            duration: 3,
-            ease: 'easeInOutQuad'
-        }).to(circle3Ref.current, {
-            // delay: 3,
-            y: -400,
-            duration: 2.5,
-            ease: 'easeInQuad'
-        })
+            gsap.timeline().to(circle1Ref.current, {
+                delay: 1.5,
+                x: -200,
+                duration: 3,
+                ease: 'easeInOutQuad'
+            }).to(circle1Ref.current, {
+                // delay: 3,
+                x: -400,
+                duration: 2.5,
+                ease: 'easeInQuad'
+            })
 
-        //3 5.5
+            gsap.timeline().to(circle2Ref.current, {
+                delay: 1.5,
+                x: 200,
+                duration: 3,
+                ease: 'easeInOutQuad'
+            }).to(circle2Ref.current, {
+                // delay: 3,
+                x: 400,
+                duration: 2.5,
+                ease: 'easeInQuad'
+            })
 
-        gsap.to(zoomRef.current, {
-            delay: 5.5,
-            scale: 11,
-            duration: 2.5,
-            ease: 'easeInQuad'
-        })
+            gsap.timeline().to(circle3Ref.current, {
+                delay: 1.5,
+                y: -80,
+                duration: 3,
+                ease: 'easeInOutQuad'
+            }).to(circle3Ref.current, {
+                // delay: 3,
+                y: -400,
+                duration: 2.5,
+                ease: 'easeInQuad'
+            })
+            //
+            //3 5.5
 
-        gsap.timeline().to(comingUpRef.current, {
-            delay: 5.5,
-            width: '924px',
-            height: '451px',
-            // width: '70%',
-            duration: 2.5,
-            ease: 'easeInQuad',
-            marginTop: '0'
-        }).to(comingUpRef.current, {
-            width: '100vw',
-            height: '100vh',
-            duration: 1,
-            borderRadius: '0'
-            // ease: 'easeInQuad',
-        })
-        //     .to(comingUpRef.current, {
-        //     // delay: 1,
-        //     // duration: 1,
-        //     attr: {
-        //         src: 'https://res.cloudinary.com/dmcrzul2v/image/upload/v1720190075/wzfcvn01lu2ybaef9cmj.png'
-        //     },
-        //     // transition: 'opacity 1s',
-        //     // backgroundImage: 'url("/road.png")'
-        // })
+            gsap.to(zoomRef.current, {
+                delay: 4.5,
+                scale: 11,
+                duration: 2.5,
+                ease: 'easeInQuad'
+            })
 
-        gsap.to(titleRef.current, {
-            delay: 5.5,
-            duration: 2.5,
-            ease: 'easeInQuad',
-            y: window.innerHeight*(-0.5) - 800
-        })
+            gsap.timeline().to(comingUpRef.current, {
+                delay: 4.5,
+                width: '924px',
+                height: '451px',
+                // width: '70%',
+                duration: 2.5,
+                ease: 'easeInQuad',
+                marginTop: '0'
+            }).to(comingUpRef.current, {
+                width: '100vw',
+                height: '100vh',
+                duration: 1,
+                borderRadius: '0'
+                // ease: 'easeInQuad',
+            })
+                .to(comingUpRef.current, {
+                // delay: 1,
+                // duration: 1,
+                attr: {
+                    src: 'https://res.cloudinary.com/dmcrzul2v/image/upload/v1720190075/wzfcvn01lu2ybaef9cmj.png'
+                },
+                // transition: 'opacity 1s',
+                // backgroundImage: 'url("/road.png")'
+            })
 
-        gsap.to(mapRef.current, {
-            delay: 8,
-            duration: 1.5,
-            ease: 'easeInQuad',
-            x: 0
-        })
+            gsap.to(titleRef.current, {
+                delay: 4.5,
+                duration: 2.5,
+                ease: 'easeInQuad',
+                y: window.innerHeight*(-0.5) - 800
+            })
 
-        const markTL = gsap.timeline().to(markRef.current, {
-            delay: 10,
-            duration: 1,
-            ease: 'easeInQuad',
-            opacity: '1',
-            top: '70px'
-        }).to(markRef.current, {
-            delay: 1,
-            duration: 1,
-            ease: 'easeInQuad',
-            top: '80px',
-            right: '50px'
-        }).to(markRef.current, {
-            delay: 1,
-            duration: 1,
-            ease: 'easeInQuad',
-            top: '130px',
-            right: '60px'
-        }).to(markRef.current, {
-            delay: 1,
-            duration: 1,
-            ease: 'easeInQuad',
-            top: '70px'
-        })
+            gsap.to(mapRef.current, {
+                delay: 7,
+                duration: 1.5,
+                ease: 'easeInQuad',
+                x: 0
+            })
 
-        gsap.to(stDelRef.current, {
-            delay: 10,
-            duration: 1,
-            ease: 'easeInQuad',
-            opacity: '0',
-        })
+            const markTL = gsap.timeline().to(markRef.current, {
+                delay: 9,
+                duration: 1,
+                ease: 'easeInQuad',
+                opacity: '1',
+                top: '70px'
+            }).to(markRef.current, {
+                delay: 1,
+                duration: 1,
+                ease: 'easeInQuad',
+                top: '80px',
+                right: '50px'
+            }).to(markRef.current, {
+                delay: 1,
+                duration: 1,
+                ease: 'easeInQuad',
+                top: '130px',
+                right: '60px'
+            }).to(markRef.current, {
+                delay: 1,
+                duration: 1,
+                ease: 'easeInQuad',
+                top: '70px'
+            })
 
-        gsap.to(ndDelRef.current, {
-            delay: 12,
-            duration: 1,
-            ease: 'easeInQuad',
-            opacity: '0',
-        })
+            gsap.to(stDelRef.current, {
+                delay: 9,
+                duration: 1,
+                ease: 'easeInQuad',
+                opacity: '0',
+            })
 
-        gsap.to(rdDelRef.current, {
-            delay: 14,
-            duration: 1,
-            ease: 'easeInQuad',
-            opacity: '0',
-        })
+            gsap.to(ndDelRef.current, {
+                delay: 11,
+                duration: 1,
+                ease: 'easeInQuad',
+                opacity: '0',
+            })
 
-        gsap.to(fthDelRef.current, {
-            delay: 16,
-            duration: 1,
-            ease: 'easeInQuad',
-            opacity: '0',
-        })
+            gsap.to(rdDelRef.current, {
+                delay: 13,
+                duration: 1,
+                ease: 'easeInQuad',
+                opacity: '0',
+            })
+
+            gsap.to(fthDelRef.current, {
+                delay: 15,
+                duration: 1,
+                ease: 'easeInQuad',
+                opacity: '0',
+            })
 
         })
         //
@@ -199,26 +205,45 @@ const Hero = () => {
 
 
     return (
-        <div className='hero __container' style={{backgroundImage: `url(${underBG.src})`}}>
+        <div className='hero __container'>
+
+            <div className="hero__bg">
+                <Image src={underBG.src} alt={'background'} fill={true}/>
+            </div>
+
             {/*<Header whenPause={whenPause} whenPlay={whenPlay}/>*/}
             {/*<Image ref={imgVectorRef} src={hero1.src} alt={'img'} className='img__middle' width={420} height={380}/>*/}
 
-            <img ref={imgVectorRef}
-                 src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178031/kxp2np5yforlo7ufoo6k.png'
-                 // src={hero1.src}
-                 alt="img" className='img__middle' style={{width: '420px', height: 'auto', zIndex: '10'}}/>
-            <img ref={zoomRef}
-                loading={"lazy"}
-                 src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178498/g26vdezo2fnvfs8gobvv.png'
-                 // src={hero1.src}
-                 alt="img" className='img__middle' style={{width: '420px', height: 'auto', zIndex: '5'}}/>
+            <div ref={imgVectorRef} style={{width: '420px', height: '452px', zIndex: '11'}} className='img__middle'>
+                <Image
+                       src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178031/kxp2np5yforlo7ufoo6k.png'
+                    // src={hero1.src}
+                       alt="img"  fill={true}/>
+            </div>
+            <div ref={imgVector2Ref} style={{width: '420px', height: '452px', zIndex: '10'}} className='img__middle'>
+                <Image
+                       src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178128/rcr66uby2avtqpfre9dj.png'
+                    // src={hero1.src}
+                       alt="img"  fill={true}/>
+            </div>
+            <div ref={zoomRef} style={{width: '420px', height: '452px', zIndex: '9'}} className='img__middle'>
+                <Image
+                    src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178498/g26vdezo2fnvfs8gobvv.png'
+                    // src={hero1.src}
+                    alt="img"  fill={true}/>
+            </div>
+            {/*<img ref={zoomRef}*/}
+            {/*    loading={"lazy"}*/}
+            {/*     src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720178498/g26vdezo2fnvfs8gobvv.png'*/}
+            {/*     // src={hero1.src}*/}
+            {/*     alt="img" className='img__middle' style={{width: '420px', height: 'auto', zIndex: '5'}}/>*/}
             {/*<div className="hero__fixed">*/}
             {/*</div>*/}
             {/*<img*/}
             {/*     src='https://res.cloudinary.com/dmcrzul2v/image/upload/v1720190075/wzfcvn01lu2ybaef9cmj.png'*/}
             {/*    // src={hero1.src}*/}
             {/*     alt="img" loading={'eager'} style={{visibility: 'hidden'}}/>*/}
-            {/*<div className="hero__background"></div>*/}
+            <div className="hero__background"></div>
             <div className="img__middle">
                 <div className="hero__circle-1 hero__circle" ref={circle1Ref}></div>
                 <div className="hero__circle-2 hero__circle" ref={circle2Ref}></div>
@@ -284,11 +309,11 @@ const Hero = () => {
                 <img ref={markRef} src="/mark.png" alt="map" className='img__mark'/>
             </div>
             <div ref={comingUpRef} className="div__up">
-                <img src="/img_1.png" alt="img-pop-up" className='img__up' style={{zIndex: '20'}} ref={stDelRef}/>
-                <img src="/img_2.png" alt="img-pop-up" className='img__up' style={{zIndex: '18'}} ref={ndDelRef}/>
-                <img src="/img_3.png" alt="img-pop-up" className='img__up' style={{zIndex: '16'}} ref={rdDelRef}/>
-                <img src="/img_4.png" alt="img-pop-up" className='img__up' style={{zIndex: '14'}} ref={fthDelRef}/>
-                <img src="/img_5.png" alt="img-pop-up" className='img__up' style={{zIndex: '12'}}/>
+                <Image fill={true} loading={'eager'} src={imgBG1.src} alt="img-pop-up" className='img__up' style={{zIndex: '20'}} ref={stDelRef}/>
+                <Image fill={true} loading={'eager'} src={imgBG2.src} alt="img-pop-up" className='img__up' style={{zIndex: '18'}} ref={ndDelRef}/>
+                <Image fill={true} loading={'eager'} src={imgBG3.src} alt="img-pop-up" className='img__up' style={{zIndex: '16'}} ref={rdDelRef}/>
+                <Image fill={true} loading={'eager'} src={imgBG4.src} alt="img-pop-up" className='img__up' style={{zIndex: '14'}} ref={fthDelRef}/>
+                <Image fill={true} loading={'eager'} src={imgBG5.src} alt="img-pop-up" className='img__up' style={{zIndex: '12'}}/>
 
             </div>
         </div>

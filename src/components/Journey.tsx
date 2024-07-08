@@ -3,6 +3,15 @@ import React, {useLayoutEffect, useRef} from 'react';
 import '@/assets/styles/Journey.css'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from "next/image";
+
+import journeyBG from '../../public/menu-card-1.jpeg'
+
+import cloudMain from '../../public/cloud-main.png'
+import cloud9h from '../../public/cloud-9h.png'
+import cloud11h from '../../public/cloud-11h.png'
+import cloud12h from '../../public/cloud-12h.png'
+import cloud13h from '../../public/cloud-13h.png'
 
 const Journey = () => {
 
@@ -159,6 +168,9 @@ const Journey = () => {
 
     return (
         <div className='journey __container'>
+            <div className="journey__bg">
+                <Image src={journeyBG.src} alt={'background'} fill={true}/>
+            </div>
             <div className="journey__background"></div>
             <div className="__content">
                 <div className="tour" ref={tourRef}>
@@ -188,11 +200,25 @@ const Journey = () => {
                 </div>
             </div>
             <div className="tour__cloud" ref={cloudRef}>
-                <img src="/cloud-main.png" alt="cloud-main" className='cloud__main'/>
-                <img src="/cloud-9h.png" alt="cloud-9h" className='cloud__9h'/>
-                <img src="/cloud-11h.png" alt="cloud-9h" className='cloud__11h'/>
-                <img src="/cloud-12h.png" alt="cloud-9h" className='cloud__12h'/>
-                <img src="/cloud-13h.png" alt="cloud-9h" className='cloud__13h'/>
+                <div className='cloud__main'>
+                    <Image src={cloudMain.src} layout={'responsive'} width={67} height={44} alt="cloud-main" loading='eager'/>
+                </div>
+                <div className='cloud__9h'>
+                    <Image src={cloud9h.src} layout={'responsive'} width={216} height={97} alt="cloud-9h" loading='eager'/>
+                </div>
+                {/*<img src="/cloud-9h.png" alt="cloud-9h" className='cloud__9h'/>*/}
+                {/*<img src="/cloud-11h.png" alt="cloud-9h" className='cloud__11h'/>*/}
+                {/*<img src="/cloud-12h.png" alt="cloud-9h" className='cloud__12h'/>*/}
+                {/*<img src="/cloud-13h.png" alt="cloud-9h" className='cloud__13h'/>*/}
+                <div className='cloud__11h'>
+                    <Image src={cloud11h.src} layout={'responsive'} width={295} height={307} alt="cloud-11h" loading='eager'/>
+                </div>
+                <div className='cloud__12h'>
+                    <Image src={cloud12h.src} layout={'responsive'} width={242} height={177} alt="cloud-12h" loading='eager'/>
+                </div>
+                <div className='cloud__13h'>
+                    <Image src={cloud13h.src} layout={'responsive'} width={3427} height={3281} alt="cloud-13h" loading='eager'/>
+                </div>
             </div>
             <div className="beautiful">
                 <div className="beautiful__text" ref={titleRef}>
